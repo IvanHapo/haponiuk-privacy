@@ -176,9 +176,9 @@
 
       <p class="eyebrow">Breath Up</p>
       <h1>Privacy Policy</h1>
-      <p class="date">Last updated · May 21, 2026</p>
+      <p class="date">Last updated · July 25, 2026</p>
 
-      <p class="lead">Breath Up keeps your data on your phone. Your breathing sessions, streaks, preferences, and goals are stored only on your device and are never sent to us — we have no servers, no analytics, and no ads. The only data that leaves your phone is what is needed to manage your subscription: the purchase is handled by Google Play, and your subscription status is managed by RevenueCat. We do not collect your name, email, location, or any personal information.</p>
+      <p class="lead">Breath Up keeps your breathing data on your phone. Your sessions, streaks, preferences, and goals are stored only on your device and are never sent to us. What does leave your phone is limited and anonymous: usage statistics that tell us which parts of the app people actually use, crash reports when something breaks, and the purchase data needed to manage your subscription. There are no ads and no advertising ID. We do not collect your name, email, precise location, or any personal identifiers — and you can turn the usage statistics off in Settings.</p>
 
       <h2>Who we are</h2>
       <p>Breath Up is made by Hapo Apps, an independent developer (Ivan Haponiuk). You can reach us at <a href="mailto:ivanhaponiuk01@gmail.com">ivanhaponiuk01@gmail.com</a>.</p>
@@ -194,44 +194,48 @@
       <p>If you uninstall the app or use "Delete account" in Settings, this data is gone.</p>
 
       <h2>What data leaves your device</h2>
-      <p>Two services are involved in subscriptions. They are the only things that send anything off your phone.</p>
+      <p>Four services receive something. None of them receives your name, your email, or the content of anything you write.</p>
       <ul>
+        <li><strong>Google Analytics for Firebase</strong> receives anonymous usage events so we can see how the app is actually used — which screens are opened, where people stop during onboarding, which techniques get started and finished, and how the subscription screen performs. These events are tied to a randomly generated app instance ID, not to you. Firebase also records your device model, operating system version, app version, language, and an approximate location (country or region) derived from your IP address. We have deliberately excluded the advertising-ID component from this SDK, so no advertising identifier is collected. You can turn this off — see "Your choices" below. Google's handling is covered by <a href="https://firebase.google.com/support/privacy">Firebase's privacy documentation</a>.</li>
+        <li><strong>Firebase Crashlytics</strong> receives a report when the app crashes: the stack trace, your device model, operating system version, available memory, and the app version. This exists so we can fix what breaks. It is tied to a Crashlytics installation identifier, not to you. This is covered by the same Firebase privacy documentation, and it is switched off by the same toggle.</li>
         <li><strong>RevenueCat</strong> manages whether you are on the free or premium plan. It receives an anonymous user ID that it generates and the purchase receipt that Google Play provides. We do not send it your name, email, or any personal details. RevenueCat's handling of this is covered by its privacy policy: <a href="https://www.revenuecat.com/privacy/">https://www.revenuecat.com/privacy/</a></li>
         <li><strong>Google Play Billing</strong> processes the actual purchase. Google Play handles all payment details. We never see your card number or billing information. This is governed by Google's Play policies.</li>
       </ul>
+      <p><strong>Your breathing data itself never leaves your phone.</strong> Analytics records that a session of a given technique was started or finished — it does not upload your session history, your streak, your heatmap, or your stats. Those exist only on your device.</p>
+      <p>We keep analytics data for no longer than 14 months, after which Google deletes it automatically.</p>
 
       <h2>What we do not collect</h2>
       <p>To be clear about the absence:</p>
       <ul>
-        <li>No analytics or usage-tracking SDKs.</li>
-        <li>No crash reporting.</li>
-        <li>No ads, no ad networks, and no advertising ID (AAID).</li>
+        <li>No ads, no ad networks, and no advertising ID (AAID). We removed the advertising-ID component from the analytics SDK rather than leaving it on by default.</li>
         <li>No account system. You do not create an account or log in.</li>
         <li>No name, email, phone number, or other personal identifiers.</li>
-        <li>No location data.</li>
+        <li>No precise or GPS location. Analytics infers a country or region from your IP address, and nothing finer than that.</li>
         <li>No contacts, photos, files, or microphone access.</li>
-        <li>No health or fitness data sent anywhere. Your breathing data and any goal you select stay on your device.</li>
-        <li>No selling or sharing of personal data, because we do not collect any.</li>
+        <li>No upload of your breathing history. Your sessions, streak, heatmap, stats, and the goal you pick stay on your device.</li>
+        <li>No selling of personal data, and no sharing of it with data brokers or advertisers.</li>
+        <li>No cross-app or cross-site tracking, and no user profiling for advertising.</li>
       </ul>
 
       <h2>Permissions and why we ask for them</h2>
       <ul>
         <li><strong>Notifications (POST_NOTIFICATIONS):</strong> to send the optional daily reminder, if you turn it on.</li>
         <li><strong>Foreground service (FOREGROUND_SERVICE, FOREGROUND_SERVICE_MEDIA_PLAYBACK):</strong> to keep the audio and the breathing animation running while your screen is off during a session.</li>
-        <li><strong>Wake lock (WAKE_LOCK):</strong> the same purpose — to keep a session running with the screen off.</li>
         <li><strong>Vibrate (VIBRATE):</strong> for the haptic cues that mark each breathing phase.</li>
+        <li><strong>Internet (INTERNET):</strong> used only for the four services listed above — usage statistics, crash reports, subscription status, and purchases. The app itself is fully functional offline; every technique, program, and session works with no connection.</li>
       </ul>
-      <p>None of these permissions access the network or upload anything.</p>
+      <p>The app does not ask for contacts, photos, files, the microphone, or location.</p>
 
       <h2>Children's privacy</h2>
-      <p>Breath Up is not directed at children under 13. We do not knowingly collect any data from children. The app does not collect personal data from anyone, so it does not collect it from children either. This is consistent with the U.S. Children's Online Privacy Protection Act (COPPA).</p>
+      <p>Breath Up is not directed at children under 13, and we do not knowingly collect data from children. We collect no personal identifiers from anyone, so we do not collect them from children either. If you believe a child has used the app and you want the associated anonymous analytics removed, contact us and we will delete it. This is consistent with the U.S. Children's Online Privacy Protection Act (COPPA).</p>
 
       <h2>Your choices and rights</h2>
       <ul>
-        <li><strong>Delete your data:</strong> "Delete account" in Settings immediately wipes all local data — sessions, program progress, preferences, and onboarding state. Because nothing was ever sent to us, there is no copy on our side to delete.</li>
+        <li><strong>Turn off usage statistics:</strong> Settings has a "Share usage data" toggle. Switching it off stops all analytics and crash reporting from that point on. The app works exactly the same either way — nothing is gated behind it.</li>
+        <li><strong>Delete your data:</strong> "Delete account" in Settings immediately wipes all local data — sessions, program progress, preferences, and onboarding state. Analytics data is anonymous and not linked to you, so we cannot look it up by name; if you want it removed, contact us and we will delete the records for your app instance.</li>
         <li><strong>Cancel your subscription:</strong> handled through Google Play using the standard Play store flow. You can also restore a purchase from the paywall.</li>
-        <li><strong>California (CCPA):</strong> California residents have rights to know, delete, and opt out of the sale of personal information. We do not collect or sell personal information, so there is nothing to disclose, nothing to delete on our end, and nothing to opt out of. The in-app delete removes your local data.</li>
-        <li><strong>EU and UK (GDPR):</strong> you have rights to access, correct, delete, and port your personal data. Since we hold no personal data about you on any server, these rights are satisfied by the in-app delete. For subscription records, you can use the controls in Google Play and RevenueCat, or contact us.</li>
+        <li><strong>California (CCPA/CPRA):</strong> California residents have rights to know, delete, and opt out of the sale or sharing of personal information. We do not sell or share personal information. The analytics we collect is anonymous usage data; you can opt out of it with the Settings toggle, and the in-app delete removes your local data.</li>
+        <li><strong>EU and UK (GDPR):</strong> you have rights to access, correct, delete, port, and object to the processing of your personal data. Our lawful basis for the anonymous usage statistics is legitimate interest in understanding and improving the app; you can object at any time by switching off the Settings toggle. We hold no account or profile about you, so access and portability are satisfied by the in-app data plus this document. Contact us for anything else.</li>
       </ul>
 
       <h2>Subscriptions and payments</h2>
