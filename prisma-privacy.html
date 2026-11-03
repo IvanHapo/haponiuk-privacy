@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>Privacy Policy — Prisma</title>
+    <title>Privacy Policy — HabitColor</title>
     <style>
         :root {
             color-scheme: light dark;
@@ -197,18 +197,18 @@
     <header>
         <span class="eyebrow">Legal</span>
         <h1>Privacy Policy</h1>
-        <p class="subtitle">How Prisma handles your data — written in plain language, backed by what the app actually does.</p>
-        <p class="meta">Effective date: April 16, 2026 · Last updated: April 16, 2026</p>
+        <p class="subtitle">How HabitColor handles your data — written in plain language, backed by what the app actually does.</p>
+        <p class="meta">Effective date: April 16, 2026 · Last updated: November 3, 2026</p>
     </header>
 
     <section class="summary" aria-label="Summary">
         <h2>At a glance</h2>
         <ul>
             <li><strong>We do not sell your data.</strong> Ever. To anyone.</li>
-            <li><strong>No ads, no ad networks, no data brokers.</strong> Prisma has no advertising SDKs.</li>
+            <li><strong>No ads, no ad networks, no data brokers.</strong> HabitColor has no advertising SDKs.</li>
             <li><strong>No account required.</strong> Your habits live on your device.</li>
             <li><strong>Analytics &amp; crash reports</strong> are collected via Google Firebase to keep the app working and improving.</li>
-            <li><strong>Payments</strong> are handled entirely by Google Play — we never see your card.</li>
+            <li><strong>Payments</strong> are handled entirely by Google Play — we never see your card. RevenueCat verifies purchases so Pro unlocks.</li>
             <li><strong>Backups</strong> go to <em>your</em> private Google Drive space — we cannot read them.</li>
         </ul>
     </section>
@@ -235,7 +235,7 @@
     <section id="who-we-are">
         <h2>1. Who we are</h2>
         <p>
-            Prisma (the &ldquo;app&rdquo;) is a habit tracker for Android published under the package name
+            HabitColor (formerly Prisma; the &ldquo;app&rdquo;) is a habit tracker for Android published under the package name
             <code>com.hapo.prisma</code>. The app and this Privacy Policy are operated by Ivan Haponiuk
             trading as <strong>Haponiuk</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), based in Argentina.
         </p>
@@ -254,7 +254,7 @@
 
         <h3>2.1 Information you create inside the app</h3>
         <p>
-            When you use Prisma, you create content such as habit names, categories, colors, reminder times,
+            When you use HabitColor, you create content such as habit names, categories, colors, reminder times,
             target frequencies, completion entries, notes, onboarding answers (your stated goals, blockers,
             preferred time, ambition level), and settings. This content is stored
             <strong>locally on your device</strong> in a SQLite database (<code>prisma.db</code>) and in
@@ -263,7 +263,7 @@
         <p>
             If you have Google&rsquo;s Android Backup enabled, this local content is automatically backed up
             by the operating system to <em>your own</em> private Google Drive storage so it can be restored
-            when you reinstall Prisma or switch devices. This backup is encrypted and accessible only to
+            when you reinstall HabitColor or switch devices. This backup is encrypted and accessible only to
             your Google account &mdash; we cannot view, download, or modify it. See
             <a href="https://support.google.com/android/answer/2819582" target="_blank" rel="noopener">Google&rsquo;s Android Backup documentation</a>
             for details.
@@ -271,7 +271,7 @@
 
         <h3>2.2 Information collected automatically</h3>
         <p>
-            To keep the app stable and understand how it&rsquo;s used in aggregate, Prisma integrates the
+            To keep the app stable and understand how it&rsquo;s used in aggregate, HabitColor integrates the
             following Google Firebase SDKs (collection is <strong>disabled</strong> in development/debug builds
             and <strong>enabled only in the production release</strong> distributed through Google Play):
         </p>
@@ -286,7 +286,7 @@
             <tbody>
             <tr>
                 <td>Firebase Analytics</td>
-                <td>Screen names, in-app events (habit created, habit completed, onboarding completed, paywall shown, purchase started/completed/restored, CSV exported/imported, weekly recap viewed), a pseudonymous app-instance ID, device type, OS version, language, coarse region, and &mdash; unless you have limited it at the OS level &mdash; the Android advertising ID.</td>
+                <td>Screen names, in-app events (habit created, habit completed, onboarding completed, paywall shown, purchase started/completed/restored, CSV exported/imported, weekly recap viewed), a pseudonymous app-instance ID, a random user ID the app creates on first launch (the same one RevenueCat receives, so a purchase can be matched to app usage), the install source reported by Google Play (the campaign tags of the store link you came from, or &ldquo;organic&rdquo;), device type, OS version, language, coarse region, and &mdash; unless you have limited it at the OS level &mdash; the Android advertising ID.</td>
                 <td>Product analytics, retention cohorts, funnel measurement.</td>
             </tr>
             <tr>
@@ -320,17 +320,24 @@
 
         <h3>2.3 Payment information</h3>
         <p>
-            If you buy Prisma Premium (monthly subscription, yearly subscription, or lifetime one-time purchase),
+            If you buy HabitColor Pro (monthly subscription, yearly subscription, or lifetime one-time purchase),
             the transaction is processed by <strong>Google Play Billing</strong>. Google is the merchant of record
-            and handles your payment instrument, billing address, and tax information. Prisma only receives
+            and handles your payment instrument, billing address, and tax information. The app only receives
             the purchase outcome: the product ID you bought, an opaque purchase token, and the acknowledgement
             state. We never receive your credit-card number, PayPal address, or any other payment credentials.
+        </p>
+        <p>
+            To verify purchases and keep Pro unlocked, the app uses <strong>RevenueCat</strong> as a service
+            provider. RevenueCat receives the purchase details from Google Play (product, price, currency,
+            purchase token, and purchase and renewal dates), the random user ID the app creates on first launch,
+            and technical data such as the app version, OS version, locale, and currency. RevenueCat does not
+            receive your name, email address, location, or payment credentials.
         </p>
 
         <h3>2.4 Information we do <em>not</em> collect</h3>
         <ul>
             <li>Your name, email, phone number, or postal address (the app has no sign-up or account).</li>
-            <li>Your precise location (Prisma does not request location permissions).</li>
+            <li>Your precise location (HabitColor does not request location permissions).</li>
             <li>Your contacts, calendar, photos, microphone, or camera.</li>
             <li>SMS or call log data.</li>
             <li>Health Connect or other specially-protected health data.</li>
@@ -343,9 +350,9 @@
         <ul>
             <li>Provide the habit-tracking functionality you installed the app for (storing your habits, showing streaks, firing reminders you scheduled).</li>
             <li>Deliver reminder and evening-nudge notifications via <em>local</em> AlarmManager &mdash; those notifications are generated entirely on your device and do not leave it.</li>
-            <li>Process your purchase of Prisma Premium and grant you access to premium features.</li>
+            <li>Process your purchase of HabitColor Pro and grant you access to Pro features.</li>
             <li>Diagnose crashes, detect performance issues, and fix bugs.</li>
-            <li>Understand, in aggregate, which features are used so we can improve the product.</li>
+            <li>Understand, in aggregate, which features are used and which links people install the app from, so we can improve the product.</li>
             <li>Roll out features safely through server-side configuration.</li>
             <li>Comply with applicable legal obligations and respond to lawful requests.</li>
         </ul>
@@ -357,7 +364,7 @@
 
     <section id="third-parties">
         <h2>4. Third-party services</h2>
-        <p>Prisma relies on the following third-party providers. Each is listed with its role and privacy policy link.</p>
+        <p>HabitColor relies on the following third-party providers. Each is listed with its role and privacy policy link.</p>
         <ul>
             <li>
                 <strong>Google Firebase</strong> (Analytics, Crashlytics, Performance Monitoring, Remote Config, Cloud Messaging) &mdash;
@@ -366,6 +373,10 @@
             <li>
                 <strong>Google Play Billing</strong> &mdash; processes subscription and one-time purchases.
                 <a href="https://play.google.com/intl/en_us/about/privacy-security-deception/billing-and-tax/" target="_blank" rel="noopener">Google Play billing policies</a>.
+            </li>
+            <li>
+                <strong>RevenueCat</strong> &mdash; verifies Google Play purchases and keeps track of which ones are active.
+                <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.
             </li>
             <li>
                 <strong>Google Play services</strong> &mdash; required Android runtime dependency on your device.
@@ -377,7 +388,7 @@
             </li>
         </ul>
         <p>
-            Prisma does <strong>not</strong> embed any advertising SDKs, cross-app trackers, social-login providers,
+            HabitColor does <strong>not</strong> embed any advertising SDKs, cross-app trackers, social-login providers,
             or customer-data platforms.
         </p>
     </section>
@@ -386,7 +397,7 @@
         <h2>5. Sharing and disclosure</h2>
         <p>We share personal data only in the limited circumstances below:</p>
         <ul>
-            <li><strong>With the processors listed above</strong> (Google / Firebase), strictly to deliver the functionality they provide to us.</li>
+            <li><strong>With the processors listed above</strong> (Google, Firebase, and RevenueCat), strictly to deliver the functionality they provide to us.</li>
             <li><strong>To comply with law</strong> &mdash; if we receive a valid subpoena, court order, or equivalent legal request, we may disclose information to the extent legally required. We would in practice have very little to disclose, as most content never leaves your device.</li>
             <li><strong>In the event of a business transfer</strong> &mdash; if the app is sold, merged, or reorganized, user data may be transferred to the acquirer, and we will update this policy and/or notify you before that happens.</li>
         </ul>
@@ -401,7 +412,7 @@
         <h2>6. Storage and security</h2>
         <p>
             Your habit content is stored locally on your device, inside the app&rsquo;s private storage area,
-            which Android isolates from other apps. Data in transit between the app and Firebase is encrypted
+            which Android isolates from other apps. Data in transit between the app and Firebase or RevenueCat is encrypted
             with TLS 1.2+.
         </p>
         <p>
@@ -418,9 +429,10 @@
     <section id="transfers">
         <h2>7. International data transfers</h2>
         <p>
-            We operate from Argentina, and Google&rsquo;s servers are distributed globally, including in the
-            United States and the European Economic Area. When personal data is transferred outside your
-            country of residence, we rely on the safeguards Google implements as a processor, including the
+            We operate from Argentina. Google&rsquo;s servers are distributed globally, including in the
+            United States and the European Economic Area, and RevenueCat is based in the United States. When
+            personal data is transferred outside your country of residence, we rely on the safeguards our
+            processors implement, including the
             European Commission&rsquo;s
             <a href="https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en" target="_blank" rel="noopener">Standard Contractual Clauses</a>
             where applicable, and equivalent mechanisms for UK and Swiss data.
@@ -447,11 +459,11 @@
                 copy of all your habits and entries on your device.
             </li>
             <li>
-                <strong>Delete your data.</strong> Uninstalling Prisma removes all locally stored data from
+                <strong>Delete your data.</strong> Uninstalling HabitColor removes all locally stored data from
                 your device. To also delete the backup held in your Google Drive, open the Google One app
-                &rarr; Settings &rarr; Back up &rarr; Manage backups, and delete the Prisma entry. For analytics
-                and crash data retained by Google, contact us (see below) and we will submit a deletion
-                request on your behalf.
+                &rarr; Settings &rarr; Back up &rarr; Manage backups, and delete the HabitColor entry. For analytics
+                and crash data retained by Google, or purchase records held by RevenueCat, contact us (see below)
+                and we will delete them or submit a deletion request on your behalf.
             </li>
             <li>
                 <strong>Opt out of analytics.</strong> You can limit ad and analytics tracking at the OS level
@@ -461,7 +473,7 @@
             </li>
             <li>
                 <strong>Notification preferences.</strong> You can turn off reminders in Android Settings
-                &rarr; Apps &rarr; Prisma &rarr; Notifications, or disable individual reminders within the app.
+                &rarr; Apps &rarr; HabitColor &rarr; Notifications, or disable individual reminders within the app.
             </li>
         </ul>
 
@@ -493,6 +505,7 @@
             <li><strong>Android Backup copies</strong> in your Google Drive are retained according to Google&rsquo;s schedule (typically deleted if a device is inactive for ~2 months or if you remove the app&rsquo;s backup manually).</li>
             <li><strong>Firebase Analytics data</strong> is retained for up to 14 months by default, then automatically deleted.</li>
             <li><strong>Crashlytics data</strong> is retained for approximately 90 days.</li>
+            <li><strong>Purchase records in RevenueCat</strong> are kept for as long as we use the service, unless you ask us to delete them.</li>
             <li><strong>Purchase records</strong> are retained by Google Play for the duration required by Google&rsquo;s policies and applicable tax law.</li>
         </ul>
     </section>
@@ -500,7 +513,7 @@
     <section id="children">
         <h2>10. Children&rsquo;s privacy</h2>
         <p>
-            Prisma is not directed to children. We do not knowingly collect personal data from anyone
+            HabitColor is not directed to children. We do not knowingly collect personal data from anyone
             under the age of 13 (or 16 in the EEA/UK, or the equivalent minimum age in your jurisdiction).
             If you believe a child has provided us with personal data, contact
             <a href="mailto:ivanhaponiuk01@gmail.com">ivanhaponiuk01@gmail.com</a> and we will delete it.
@@ -524,7 +537,7 @@
             We may update this Privacy Policy from time to time to reflect changes in the app, in applicable
             law, or in our practices. When we do, we will change the &ldquo;Last updated&rdquo; date at the
             top of this page. If the changes are material, we will notify you in-app or by other reasonable
-            means before they take effect. Continued use of Prisma after the update means you accept the
+            means before they take effect. Continued use of HabitColor after the update means you accept the
             revised policy.
         </p>
     </section>
@@ -542,8 +555,8 @@
 
     <footer>
         <p>
-            &copy; 2026 Haponiuk. Prisma is a trademark of its respective owner. All other marks are property
-            of their respective holders.
+            &copy; 2026 Haponiuk. Google Play, Firebase, and RevenueCat are trademarks of their respective
+            owners.
         </p>
     </footer>
 </main>
